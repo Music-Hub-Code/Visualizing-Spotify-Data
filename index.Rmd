@@ -3,7 +3,7 @@ title: "Visualizing Spotify Data"
 output: html_notebook
 ---
 
-This R Notebook is the complement to my blog post Visualizing Spotify Data.
+This R Notebook is the complement to my blog post [Visualizing Spotify Data](https://begahtan.github.io/2017/07/visualizing-spotify.html).
 
 This notebook is licensed under the MIT License. If you use the code or data visualization designs contained within this notebook, it would be greatly appreciated if proper attribution is given back to this notebook and/or myself. Thanks! :)
 
