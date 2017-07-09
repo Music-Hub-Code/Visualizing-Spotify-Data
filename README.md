@@ -3,6 +3,6 @@ Github repo to complement https://begahtan.github.io/2017/07/visualizing-spotify
 <br>
 View notebook [here](https://begahtan.github.io/Visualizing-Spotify-Data/)
 <hr>
-Data collected using [spotify.py](https://github.com/begahtan/Visualizing-Spotify-Data/blob/master/spotify.py)
+Data collected using spotify.py
 <br>
 Usage: python spotify.py username
