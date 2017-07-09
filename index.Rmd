@@ -1,0 +1,62 @@
+---
+title: "Visualizing Spotify Data"
+output: html_notebook
+---
+
+This R Notebook is the complement to my blog post Visualizing Spotify Data.
+
+This notebook is licensed under the MIT License. If you use the code or data visualization designs contained within this notebook, it would be greatly appreciated if proper attribution is given back to this notebook and/or myself. Thanks! :)
+
+###Setup
+```{r}
+library(ggplot2)
+topTracks = read.csv("Data/Top Tracks.csv")
+Artists = topTracks$ArtistName
+Ranking = topTracks$MyRanking
+Popularity = topTracks$GlobalPopularity
+Tempo = topTracks$Tempo
+Volume = topTracks$Loudness
+```
+
+###Exploratory Top Tracks
+```{r}
+qplot(Ranking,Popularity,xlab="Ranking (Ordinal)",ylab="Global Popularity (Index)", main="Global Popularity vs Personal Ranking") + theme(plot.title=element_text(hjust = 0.5))
+
+```
+```{r}
+qplot(Ranking,Tempo,xlab="Ranking (Ordinal)",ylab="Tempo (BPM)",main="Song Tempo vs Personal Ranking") + theme(plot.title=element_text(hjust = 0.5))
+```
+
+```{r}
+qplot(Ranking,Volume,xlab="Ranking (Ordinal)",ylab="Volume (Decibels)", main="Song Volume vs Personal Ranking") + theme(plot.title=element_text(hjust = 0.5))
+```
+
+```{r}
+Artists.freq = table(Artists)
+barplot(Artists.freq, main="Frequency of Artists in Top 50 Tracks")
+```
+
+###Comparing to Daily Mix Playlist
+
+```{r}
+dailyMix = read.csv("Data/Daily Mix.csv")
+MixArtists = dailyMix$ArtistName
+MixRanking = dailyMix$PlaylistRanking
+MixPopularity = dailyMix$GlobalPopularity
+MixTempo = dailyMix$Tempo
+MixVolume = dailyMix$Loudness
+
+qplot(MixRanking,MixPopularity,xlab="Mix Song Ranking (Ordinal)",ylab="Mix Song Popularity (Index)", main="Global Popularity vs Mix Song Popularity") + theme(plot.title=element_text(hjust = 0.5))
+```
+
+```{r}
+qplot(MixTempo,MixPopularity,xlab="Mix Song Tempo (BPM)",ylab="Mix Song Popularity (Index)",main="Mix Song Tempo vs Mix Song Popularity") + theme(plot.title=element_text(hjust = 0.5))
+```
+
+```{r}
+qplot(MixRanking,MixVolume,main="Mix Song Volume vs Mix Song Ranking",xlab="Mix Ranking",ylab="Mix Volume (Decibels)") + theme(plot.title=element_text(hjust = 0.5))
+```
+
+```{r}
+levels(MixArtists)
+```
