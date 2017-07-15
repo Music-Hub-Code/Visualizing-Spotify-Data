@@ -22,7 +22,7 @@ pip install spotipy
 
 python spotify.py username
 
-Because it was made using functional programming, you can modify the tool to suit your data collection needs! See (the Spotify API Endpoints) for the data you can collect.
+Because it was made using functional programming, you can modify the tool to suit your data collection needs! See (the Spotify API Endpoints)[https://developer.spotify.com/web-api/endpoint-reference/] for the data you can collect.
 
 The functions I have created are:
 - my_top_tracks(username,amountToOutput) => see your top tracks outputted in Excel and their attributes
