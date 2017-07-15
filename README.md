@@ -2,11 +2,11 @@
 Github repo to complement https://begahtan.github.io/2017/07/visualizing-spotify.html
 <br>
 
-# How does it work?
+## How does it work?
 
 Using Spotify API, that's all.
 
-Requirement
+## Requirements
 
 This tool is built by Python 2 and uses requests module for querying the API and the spotipy library for OAuth.
 
@@ -18,7 +18,7 @@ pip install requests
 
 pip install spotipy
 
-# How to use?
+## How to use?
 
 python spotify.py username
 
