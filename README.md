@@ -1,4 +1,7 @@
 # Visualizing-Spotify-Data
+
+A wrapper around the official Spotify API to help you download your spotify activity and see your bizarre tastes.
+<br>
 Github repo to complement https://begahtan.github.io/2017/07/visualizing-spotify.html
 <br>
 
